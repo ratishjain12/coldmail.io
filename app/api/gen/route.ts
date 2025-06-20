@@ -10,7 +10,7 @@ export async function POST(request: Request) {
     socialLinks,
     skills,
     model,
-  }: emailFormType = await request.json();
+  }: emailFormType & { model: string } = await request.json();
 
   let links: string = socialLinks
     .map((socialLink) => `${socialLink.platform}: ${socialLink.link}`)

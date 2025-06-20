@@ -70,7 +70,6 @@ const emailFormSchema = z.object({
     )
     .max(4, "You can add up to 4 social links"),
   skills: z.string().min(1, "Skills/USP is required"),
-  model: z.string().min(1, "Model is required"),
 });
 
 export type emailFormType = z.infer<typeof emailFormSchema>;
